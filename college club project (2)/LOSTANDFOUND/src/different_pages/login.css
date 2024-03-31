@@ -1,0 +1,98 @@
+/* login.css */
+.whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eceff1; /* Light grey background */
+  }
+  
+  #mainlogin {
+    width: 100%;
+  }
+  
+  #containerlogin {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  #containerlogin h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+  }
+  
+  #forgot-passwordlogin {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  #forgot-passwordlogin a {
+    color: #0277bd;
+    text-decoration: none;
+  }
+  
+  #login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #login button:hover {
+    background-color: #0056b3;
+  }
+  
+  #signuplogin {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #signuplogin a {
+    color: #0277bd;
+    text-decoration: none;
+  }
+  
+  #orlogin {
+    text-align: center;
+    margin: 20px 0;
+    margin-left: 50%;
+  }
+  
+  #facebooklogin button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b5998; /* Facebook Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #facebooklogin button:hover {
+    background-color: #30487b;
+  }
+  
+  #facebooklogin span {
+    margin-left: 10px;
+  }
+  

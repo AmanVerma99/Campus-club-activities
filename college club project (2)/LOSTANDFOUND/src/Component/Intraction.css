@@ -1,0 +1,82 @@
+.news {
+    max-height: 90vh; /* or any value that suits your layout */
+    overflow-y: auto;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; 
+  }
+  
+  .news::-webkit-scrollbar {
+    display: none; 
+  }
+
+.sectioni {
+  padding: 20px;
+  background-color: #f5f5f5;
+  width: 90%;
+}
+.section-center-featured-centeri{
+  width: 50vw;
+  gap: 5px;
+}
+.section-centeri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-itemi {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width */
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.writtenParti {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.writtenParti:hover{
+  scale: 1;
+}
+
+.profilePici{
+  left:10px ;
+}
+
+.profilePici img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto; 
+}
+
+.nameAndDiscriptioni {
+  text-align: center; 
+}
+.nameAndDiscriptioni {
+  display: flex;
+  flex-direction: column;
+}
+.profileNamei h2, .discriptioni p {
+  margin-top: 15px; 
+}
+.clubNamei{
+  color: bisque;
+}
+.posti img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover;
+  border-top: 1px solid #eee;
+}
+
+  

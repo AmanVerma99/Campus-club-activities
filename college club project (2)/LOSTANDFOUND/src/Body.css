@@ -1,0 +1,60 @@
+/* Body.css */
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: start; 
+    padding: 20px; /* Add some padding around the content */
+  }
+  
+  .profile {
+    flex: 1;
+    margin-right: 20px; 
+    border-right: 2px solid #ccc; 
+  }
+  
+  .news {
+    flex: 2; 
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    height: 100vh;
+    /* margin-right: 105px; */
+  }
+  .container {
+  display: flex;
+}
+
+.news-and-bottom-box {
+  display: flex;
+  flex-direction: column;
+}
+/* 
+#main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.bottom-box {
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px;
+  margin-top: 20px; /* Adjust as needed */
+  /* Additional styling as needed */
+}
+@media (max-width: 600px) {
+  .profilep{
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .profile {
+    border-right:none; 
+  }
+  
+  /* .profile {
+    display: none;
+  } */
+}
