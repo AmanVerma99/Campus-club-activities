@@ -55,7 +55,9 @@ const Post = () => {
           </div>
           <div className='input-icon'>
             <i className="fas fa-pencil-alt"></i>
-            <input type="text" name="description" placeholder='Please enter the description of the post' onChange={handleChange} value={formData.description} required/>
+            <div className='discription'>
+              <input className="discriptionname" type="text" name="description" placeholder='Please enter the description of the post' onChange={handleChange} value={formData.description} required/>
+            </div>
           </div>
         </div>
         <div className='lowerBox'>
