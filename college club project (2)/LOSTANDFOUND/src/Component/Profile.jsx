@@ -35,7 +35,7 @@ const Profile = () => {
         </section>
         <section className="contact-infop">
           <h2>Contact Info</h2>
-          <p><strong>Email:</strong> {data.name}</p>
+          <p><strong>Email:</strong> {data.email_id}</p>
           <p><strong>Phone:</strong> 6378869669</p>
         </section>
       </div>
