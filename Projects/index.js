@@ -110,7 +110,7 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
   app.get('/api/images', async (req, res) => {
     try {
       // SQL query to select image data and descriptions
-      const query = 'SELECT id, image_data, description FROM post';
+      const query = 'SELECT u.id as userID, u.name, u.club_name, post.image_data, post.id, post.description FROM users as u join post on post.user_id = u.id';
   
       // Execute the query
       const result = await db.query(query);

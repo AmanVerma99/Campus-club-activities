@@ -1,19 +1,19 @@
 /* Body.css */
 
-.container {
+.containerb {
     display: flex;
     justify-content: space-between; 
     align-items: start; 
     padding: 20px; /* Add some padding around the content */
   }
   
-  .profile {
+  .profileb {
     flex: 1;
     margin-right: 20px; 
     border-right: 2px solid #ccc; 
   }
   
-  .news {
+  .newsb {
     flex: 2; 
     align-items: center;
     justify-content: center;
@@ -22,14 +22,25 @@
     height: 100vh;
     /* margin-right: 105px; */
   }
-  .container {
+  .containerb {
   display: flex;
 }
 
-.news-and-bottom-box {
+.profileb{
   display: flex;
   flex-direction: column;
 }
+
+
+.news-and-bottom-boxb {
+  display: flex;
+  flex-direction: column;
+}
+.newsb{
+  overflow: scroll;
+}
+
+
 /* 
 #main{
   display: flex;
@@ -37,7 +48,7 @@
   justify-content: center;
 } */
 
-.bottom-box {
+.bottom-boxb {
   background-color: #f0f0f0; /* Example background color */
   padding: 20px;
   margin-top: 20px; /* Adjust as needed */
@@ -47,10 +58,10 @@
   .profilep{
     width: 100%;
   }
-  .container {
+  .containerb {
     flex-direction: column;
   }
-  .profile {
+  .profilep {
     border-right:none; 
   }
   
