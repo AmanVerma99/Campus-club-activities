@@ -22,7 +22,7 @@ const db = new pg.Client({
     user: 'postgres',
     host: 'localhost',
     database: 'Project',
-    password: '1234',
+    password: 'gorra@1206',
     port: 5432,
 });
   
@@ -121,6 +121,19 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
       res.json(result.rows);
     } catch (error) {
       console.error('Error fetching images:', error);
+      res.sendStatus(500);
+    }
+  });
+
+  app.post('/api/add',async (req,res)=>{
+    try{
+      const query = 'update users set position = $1 , club_name = $2 where email_id = $3;';
+      await db.query(query,['MEMBER',req.body.clubName,req.body.email]);
+      console.log("Sucessfully Updated");
+      res.sendStatus(200);
+    }
+    catch(e){
+      console.log("Error");
       res.sendStatus(500);
     }
   });
