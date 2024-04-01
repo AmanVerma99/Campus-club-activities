@@ -138,6 +138,23 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
     }
   });
 
+  app.post('/api/club',async (req,res)=>{
+    try{
+      const query = 'SELECT u.id ,u.name, u.club_name, post.image_data, post.id from users as u join post on post.user_id = u.id where u.club_name = $1;'
+      const result = await db.query(query,[req.body.club_Name]);
+      const query1 = 'SELECT  * from users WHERE club_name = $1';
+      const result1 = await  db.query(query1,[req.body.club_Name]);
+      console.log("Extracted sucessfully");
+      res.json({posts:result.rows, member:result1.rows});
+
+    }
+    catch(e){
+      console.log("Error");
+      res.sendStatus(400);
+    }
+  });
+  
+
 app.listen(port, () => {
     console.log(`API is running at http://localhost:${port}`);
 });
