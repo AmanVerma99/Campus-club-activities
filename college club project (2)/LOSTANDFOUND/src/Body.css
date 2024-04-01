@@ -38,8 +38,12 @@
 }
 .newsb{
   overflow: scroll;
+  /* scrollbar-width: 0; */
+  /* scrollbar-color: red; */
 }
-
+.newsb{
+  scrollbar-width: 0;
+}
 
 /* 
 #main{
