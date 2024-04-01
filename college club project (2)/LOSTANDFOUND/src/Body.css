@@ -45,6 +45,17 @@
   scrollbar-width: 0;
 }
 
+.addMember {
+  width: 300px;
+  border: 1px solid black; /* This combines width, style, and color */
+  /* background-color: aqua; */
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
+.addMessage{
+  margin-left:25px ;
+}
 /* 
 #main{
   display: flex;
@@ -68,7 +79,9 @@
   .profilep {
     border-right:none; 
   }
-  
+  .addMember{
+    display: none;
+  }
   /* .profile {
     display: none;
   } */

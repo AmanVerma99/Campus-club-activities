@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Post = () => {
   const [formData, setFormData] = useState({
-    images: null, // Change to null
+    images: null, 
     description: '',
   });
 
@@ -18,10 +18,10 @@ const Post = () => {
   };
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0]; // Get the selected file
+    const file = e.target.files[0]; 
     setFormData(prevState => ({
       ...prevState,
-      images: file, // Store the selected file in state
+      images: file, 
     }));
   };
 
@@ -30,8 +30,8 @@ const Post = () => {
 
     try {
       const formDataForUpload = new FormData();
-      formDataForUpload.append('images', formData.images); // Append the image file
-      formDataForUpload.append('description', formData.description); // Append other form data
+      formDataForUpload.append('images', formData.images);
+      formDataForUpload.append('description', formData.description); 
 
       const response = await axios.post('http://localhost:3000/api/upload', formDataForUpload, {
         headers: {

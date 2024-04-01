@@ -133,7 +133,7 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
     try{
       console.log(req.body.clubName,req.body.email);
       const query = 'update users set position = $1 , club_name = $2 where email_id = $3;';
-      await db.query(query,['MEMBER',req.body.clubName,req.body.email]);
+      await db.query(query,['MEMBER',user.club_name,req.body.email]);
       console.log("Sucessfully Updated");
       res.sendStatus(200);
     }
