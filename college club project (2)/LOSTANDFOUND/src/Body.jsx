@@ -11,8 +11,6 @@ import { useState,useEffect } from 'react';
 //  /api/add
 const Body = () => {
   const [somedata, setsomedata] = useState([]);
-
-    
     const handleChange = (e) => {
       const { name, value } = e.target;
       setFormData(prevState => ({
@@ -35,8 +33,8 @@ const Body = () => {
       }, []);
 
       const [formData, setFormData] = useState({
-        email: "", // Change to null
-        clubName : somedata.clubName,
+        email: "", 
+        clubName : somedata.club_name,
       });
       
       
@@ -45,11 +43,12 @@ const Body = () => {
 
     try {
       const formData = new FormData();
-      const response = await axios.post('http://localhost:3000/api/add', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      console.log(formData);
+      const response = await axios.post('http://localhost:3000/api/add', formData
+        // headers: {
+        //   'Content-Type': 'multipart/form-data',
+        // },
+      );
       console.log(response.data);
       window.location.href='./';
     } catch (error) {

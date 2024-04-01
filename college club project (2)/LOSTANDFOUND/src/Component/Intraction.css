@@ -1,13 +1,11 @@
 .news {
     max-height: 90vh; /* or any value that suits your layout */
-    overflow-y: auto;
-    scrollbar-width: none; /* for Firefox */
-    -ms-overflow-style: none; 
+    /* overflow-y: auto;
+    scrollbar-width: 0; for Firefox */
+    /* scrollbar-hig: ; */
   }
   
-  .news::-webkit-scrollbar {
-    display: none; 
-  }
+
 
 .sectioni {
   padding: 20px;

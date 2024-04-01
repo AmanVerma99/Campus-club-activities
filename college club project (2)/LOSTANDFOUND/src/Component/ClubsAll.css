@@ -37,7 +37,10 @@ flex-direction: column;
 margin-top: 10px;
 }
 
-
+.profile-item:hover{
+  scale: 1.04;
+  transition-duration: 1ms;
+}
 
 .writtenPart {
 padding: 15px;
@@ -46,7 +49,7 @@ flex-direction: column;
 gap: 10px;
 }
 .writtenPart:hover{
-  scale: 1.1;
+  /* scale: 1.1; */
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }

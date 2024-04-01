@@ -116,7 +116,7 @@ const Intraction = () => {
   }, []);
 
   return (
-    <section className="section" id="profiles">
+    <section className="sectioni" id="profilesi">
       {images.map((image) => { // Corrected to map over images
         const { id, description, name , club_name } = image; // Destructure properties inside map
         return (
