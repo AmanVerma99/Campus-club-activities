@@ -1,5 +1,71 @@
-#page2Main{
+/* General body styling for a consistent background and font */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+/* Main clubs container */
+#mainclubs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: 20px; */
+    min-height: 100vh; /* Full height */
+    background-color: #ffffff; /* Light background for the main content area */
+}
+.nav{
+    width: 100%;
+}
+/* Clubs container to arrange profile and news side by side */
+.containerclubs {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 20px; /* Spacing between elements */
+    max-width: 1200px; /* Max width with some margin to the window edge */
+}
+
+/* Profile section styling */
+.profileclubs {
+    flex: 1; /* Take up equal space */
+    min-width: 300px; /* Minimum width before wrapping */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* News section styling */
+.newsclubs {
+    flex: 2; /* Takes up twice the space of the profile section, if space allows */
+    min-width: 450px; /* Minimum width before wrapping */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow: scroll;
+    scrollbar-width: none
+}
+
+/* If you have a #page2Main that needs specific styling */
+#page2Main {
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #d1d8e0; /* A soothing background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer styling for consistency */
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #404040; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    /* margin-top: auto; Push to the bottom if content is not enough */
 }

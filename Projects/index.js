@@ -22,7 +22,7 @@ const db = new pg.Client({
     user: 'postgres',
     host: 'localhost',
     database: 'Project',
-    password: 'gorra@1206',
+    password: '1234',
     port: 5432,
 });
   
@@ -110,14 +110,18 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
   app.get('/api/images', async (req, res) => {
     try {
       // SQL query to select image data and descriptions
+
+      const query = 'SELECT u.id as userID, u.name, u.club_name, post.image_data, post.id, post.description FROM users as u join post on post.user_id = u.id';
+
       // const query = 'SELECT id, image_data, description FROM post ';
-      const query = 'SELECT u.id ,u.name, u.club_name, post.image_data, post.id from users as u join post on post.user_id = u.id; '
+      // const query = 'SELECT u.id ,u.name, u.club_name, post.image_data, post.id from users as u join post on post.user_id = u.id; '
+
       // Execute the query
       const result = await db.query(query);
       
       // Send the retrieved data as JSON in the response
       res.set('Content-Type', 'image/jpeg');
-      console.log(result.rows);
+      // console.log(result.rows);
       res.json(result.rows);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -127,6 +131,7 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
 
   app.post('/api/add',async (req,res)=>{
     try{
+      console.log(req.body.clubName,req.body.email);
       const query = 'update users set position = $1 , club_name = $2 where email_id = $3;';
       await db.query(query,['MEMBER',req.body.clubName,req.body.email]);
       console.log("Sucessfully Updated");

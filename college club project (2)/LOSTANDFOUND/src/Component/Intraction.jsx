@@ -116,9 +116,9 @@ const Intraction = () => {
   }, []);
 
   return (
-    <section className="section" id="profiles">
+    <section className="sectioni" id="profilesi">
       {images.map((image) => { // Corrected to map over images
-        const { id, description, image_data } = image; // Destructure properties inside map
+        const { id, description, name , club_name } = image; // Destructure properties inside map
         return (
           <article key={id} className="profile-itemi">
             <div className='writtenParti'>
@@ -129,6 +129,10 @@ const Intraction = () => {
                     {/* Added template literal for alt attribute */}
                 </div>
                 <div className='nameAndDiscriptioni'>
+                <div className='profileNamei'>
+                 <h3 className='namei'>{name}</h3>
+                 <h4 className='clubNamei'>club :{club_name}</h4>
+               </div>
                   <div className='profileNamei'>
                       <h3 className='namei'>{}</h3>
                       {/* Removed duplicate club name */}

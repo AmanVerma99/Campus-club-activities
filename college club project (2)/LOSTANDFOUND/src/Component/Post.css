@@ -41,6 +41,19 @@
     transform: translateY(-50%);
     color: #777;
   }
+
+  .discriptionname:focus::placeholder {
+    color: transparent; /* This makes the placeholder text transparent on focus */
+  }
+
+  .discriptionname:hover{
+    height: 30vh;
+    
+  }
+  .discriptionname::placeholder {
+    color: #888;
+    /* position: top; */
+  }
   
   .imgInput input[type="file"] {
     width: 100%;
