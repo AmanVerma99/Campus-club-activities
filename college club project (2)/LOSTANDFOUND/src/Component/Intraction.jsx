@@ -124,9 +124,7 @@ const Intraction = () => {
             <div className='writtenParti'>
               <div className='containeri'>
                 <div className='profilePici'>
-                    {/* <img src={image_data} alt={`Profile of ${description}`} />  */}
                     <img src={`/api/image/${image.id}`} alt={`Profile of ${image.description}`} />
-                    {/* Added template literal for alt attribute */}
                 </div>
                 <div className='nameAndDiscriptioni'>
                 <div className='profileNamei'>
@@ -135,7 +133,6 @@ const Intraction = () => {
                </div>
                   <div className='profileNamei'>
                       <h3 className='namei'>{}</h3>
-                      {/* Removed duplicate club name */}
                   </div>
                   <div className='discriptioni'>
                       <p>{description}</p>

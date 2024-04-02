@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 2,
-    name: "Lionel Messi",
+    name: "NA",
     clubName: "Paris Saint-Germain",
     image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg",
     description: "Argentine professional footballer widely considered one of the greatest of all time.",

@@ -65,8 +65,8 @@ const Post = () => {
             {/* Change input type to file and add onChange event */}
             <input type="file" className="images" name="images" accept="image/jpeg" onChange={handleImageChange} required/>
           </div>
-          <div className='submit'>
-            <input type="submit" />
+          <div className='submitPost'>
+            <input className='submitPost' type="submit" />
           </div>
         </div>
       </form>

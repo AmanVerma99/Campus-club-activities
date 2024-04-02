@@ -1,7 +1,7 @@
 const clubsData = [
     {
       id: 1,
-      name: "Astronomy Club",
+      name: "FINE ARTS",
       description: "Dedicated to exploring the mysteries of the universe, the Astronomy Club hosts stargazing nights, workshops, and guest lectures for space enthusiasts.",
       secretaries: {
         president: "Alex Rivera",
