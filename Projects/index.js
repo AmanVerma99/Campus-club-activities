@@ -8,7 +8,20 @@ import multer from "multer";
 const app = express();
 const port = 3000;
 
-let user = {};
+// let user = {};
+
+let userId;
+let user = {
+  name:'',
+  department:'',
+  email_id:'',
+  position:'',
+  club_name:'',
+  about:'',
+  location:'',
+  age:'',
+  image:''
+};
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -41,7 +54,14 @@ app.post("/api/signUp",async (req,res)=>{
         if(!isPasswordCorrect){
             throw new Error('Wrong Password');
         }
-        user = result.rows[0];
+        // user = result.rows[0];
+        user.name = result.rows[0].name;
+        user.email_id = result.rows[0].email_id;
+        user.department = result.rows[0].department;
+        user.club_name = result.rows[0].club_name;
+        user.position = result.rows[0].position;
+        console.log(user.id);
+
         res.sendStatus(200);
     }
     catch(err){
@@ -59,8 +79,15 @@ app.post("/api/login", async (req, res) => {
         if(!isPasswordCorrect){
             throw new Error('Wrong Password');
         }
-        user = result.rows[0];
-        console.log(result.rows);
+        // user = result.rows[0];
+        user.name = result.rows[0].name;
+        user.email_id = result.rows[0].email_id;
+        user.department = result.rows[0].department;
+        user.club_name = result.rows[0].club_name;
+        user.position = result.rows[0].position;
+        // console.log(result.rows);
+        userId = result.rows[0].id;
+        console.log(userId);
         res.json(result.rows[0]);
     }catch(e){
         // res.json({msg:e.message});
@@ -77,9 +104,11 @@ app.get("/api/profile",(req,res)=>{
 
 app.post('/api/upload', upload.single('images'), async (req, res) => {
     try {
-        console.log(req.file);
+        // console.log(req.file);
       const image = req.file.buffer; // get image buffer
-      const result = await db.query('INSERT INTO post (image_data,description,user_id) VALUES ($1,$2,$3)', [image,req.body.description, user.id]);
+      // console.log(user.id);
+      // console.log(req.user);
+      const result = await db.query('INSERT INTO post (image_data,description,user_id) VALUES ($1,$2,$3)', [image,req.body.description, userId]);
       res.json('Image uploaded successfully!');
     } catch (err) {
       console.error('Error uploading image:', err);
@@ -101,6 +130,25 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
       // Send the image data as response
       res.set('Content-Type', 'image/jpeg'); // Assuming JPEG format, adjust as per your image type
       res.send(result.rows[0].image_data);
+    } catch (err) {
+      console.error('Error fetching image:', err);
+      res.status(500).send('Error fetching image');
+    }
+});
+
+  app.get('/api/profile/:email', async (req, res) => {
+    try {
+      const id = req.params.email;
+      const result = await db.query('SELECT profile_image FROM user_profile WHERE email = $1', [id]);
+  
+      if (result.rows.length === 0) {
+        res.status(404).send('Image not found');
+        return;
+      }
+  
+      // Send the image data as response
+      res.set('Content-Type', 'image/jpeg'); // Assuming JPEG format, adjust as per your image type
+      res.send(result.rows[0].profile_image);
     } catch (err) {
       console.error('Error fetching image:', err);
       res.status(500).send('Error fetching image');
@@ -160,6 +208,43 @@ app.post('/api/upload', upload.single('images'), async (req, res) => {
       res.sendStatus(400);
     }
   });
+
+  app.post("/api/update",upload.single('image'), async (req,res)=>{
+    console.log(req.body);
+    const images = req.file.buffer; 
+    console.log(images);
+    try{
+      const search = await db.query("select * from users where email_id = $1",[req.body.email]);
+      if(search.rows.length == 0){
+        console.log("Incorrect email");
+        res.sendStatus(404);
+      }
+      //await db.query("INSERT INTO user_profile(email, location, age, profile_image, about) VALUES ($1, $2, $3, $4, $5)", [req.body.email, req.body.location, req.body.age, image, req.body.about]);
+      console.log("hello");
+      const result = await db.query("select * from user_profile where email = $1",[req.body.email]);
+      if(result.rows.length > 0){
+        
+        await db.query("delete from user_profile where email = $1",[req.body.email]);
+      }
+      await db.query("insert into user_profile (email,location,age,profile_image,about) values ($1,$2,$3,$4,$5)",[req.body.email,req.body.location,req.body.age,images,req.body.about]);
+      user.about = req.body.about;
+      user.location = req.body.location;
+      user.age = req.body.age;
+      user.image=images;
+      res.sendStatus(200);
+
+    }catch(e){
+      console.log(e);
+      res.sendStatus(400);
+    }
+  })
+
+  app.get("/api/dashboard/:email",async (req,res)=>{
+    const email = req.params.email;
+    const profile = await db.query("select * from user_profile where email = $1",[email]);
+    const user = await db.query("select * from users where email = $1",[email]);
+    res.json({user_details:user.rows[0],profile_details:profile.rows[0]});
+  })
   
 
 app.listen(port, () => {
