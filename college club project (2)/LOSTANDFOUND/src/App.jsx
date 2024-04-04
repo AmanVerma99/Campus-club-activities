@@ -7,6 +7,7 @@ import SignUp from "./different_pages/SignUp";
 import Body from "./Body";
 import News from "./Component/News";
 import Update from "./Update";
+import AboutUs from "./AboutUs";
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/signUp" element={<SignUp/>} />
         <Route path="/news" element={<News/>} /> 
         <Route path="/update" element={<Update/>}/>
+        <Route path="/aboutUs" element={<AboutUs/>}/>
       </Routes>
     </BrowserRouter>
   );
