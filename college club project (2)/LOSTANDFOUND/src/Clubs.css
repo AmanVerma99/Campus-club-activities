@@ -69,3 +69,6 @@ footer {
     color: #fff; /* White text color */
     /* margin-top: auto; Push to the bottom if content is not enough */
 }
+@media (max-width: 600px) {
+    
+}

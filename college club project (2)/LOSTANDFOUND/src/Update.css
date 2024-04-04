@@ -1,0 +1,28 @@
+.containerclubsUpdate {
+    display: flex;
+    flex-direction: row; /* Use column for vertical alignment */
+    justify-content: center; /* Centers children horizontally; use flex-start or flex-end for alignment to the start or end */
+    align-items: center; /* Centers children vertically */
+    gap: 20px; /* Adjusts space between the Profile and UpdateProfile components */
+  }
+  .profileclubsUpdate{
+    border-right:2px solid rgb(28, 20, 20) ;
+  }
+  .newsclubsUpdate{
+    width: 60vw;
+  }
+  .profileclubsUpdate,
+  .newclubsUpdate {
+    flex: 1; /* Ensures that both children take up equal space in the container */
+  }
+  
+  /* Add additional styling below to further customize appearance, responsiveness, etc. */
+  @media (max-width: 608px) {
+    .profileclubsUpdate{
+        display: none;
+    }
+    .newsclubsUpdate{
+        width: 95vw;
+      }
+  }
+  

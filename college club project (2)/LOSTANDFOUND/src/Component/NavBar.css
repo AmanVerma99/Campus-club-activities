@@ -10,6 +10,8 @@
 
   }
 
+  
+
   .left, .right {
     display: flex;
     align-items: center;
@@ -139,6 +141,15 @@
   
     .dropdown{
       left: 40px;
+      /* margin-bottom: 5px; */
+    }
+
+    #aallo{
+      margin-bottom: 5px;
+    }
+
+    .dropdown-content{
+      margin-bottom: 5px;
     }
 
     .nav-menu {

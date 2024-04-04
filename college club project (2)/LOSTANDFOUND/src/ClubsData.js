@@ -1,7 +1,7 @@
 const clubsData = [
     {
       id: 1,
-      name: "Astronomy Club",
+      name: "FINE ARTS",
       description: "Dedicated to exploring the mysteries of the universe, the Astronomy Club hosts stargazing nights, workshops, and guest lectures for space enthusiasts.",
       secretaries: {
         president: "Alex Rivera",
@@ -13,7 +13,7 @@ const clubsData = [
     },
     {
       id: 2,
-      name: "Robotics Society",
+      name: "TECHNOBYTE",
       description: "Fostering innovation and engineering excellence, the Robotics Society engages members in robot design competitions, hackathons, and workshops.",
       secretaries: {
         president: "Elijah Patel",
@@ -25,7 +25,7 @@ const clubsData = [
     },
     {
       id: 3,
-      name: "Literature Club",
+      name: "I&E CELL",
       description: "A haven for book lovers and writers alike, the Literature Club discusses classic and contemporary works, hosts author talks, and runs writing workshops.",
       secretaries: {
         president: "Nora Johnson",

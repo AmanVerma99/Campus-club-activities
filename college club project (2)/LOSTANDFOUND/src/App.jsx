@@ -6,7 +6,7 @@ import Login from './different_pages/login';
 import SignUp from "./different_pages/SignUp";
 import Body from "./Body";
 import News from "./Component/News";
-
+import Update from "./Update";
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,7 +15,8 @@ const App = () => {
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signUp" element={<SignUp/>} />
-        <Route path="/news" element={<News/>} /> {/* Added News route */}
+        <Route path="/news" element={<News/>} /> 
+        <Route path="/update" element={<Update/>}/>
       </Routes>
     </BrowserRouter>
   );
