@@ -262,7 +262,9 @@ const Body = () => {
           </form>
         </div>
         <div className='newsb'>
-          <Post/>
+        {(somedata.position === 'PRESIDENT' || somedata.position === 'MEMBER') && (
+              <Post/>
+        )}
           <Intraction/>
         </div>
       </div>

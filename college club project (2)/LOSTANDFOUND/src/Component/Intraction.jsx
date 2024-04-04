@@ -1,97 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-
-// const ImageGallery = () => {
-//   const [images, setImages] = useState([]);
-
-//   // Fetch images from the server when the component mounts
-//   useEffect(() => {
-//     const fetchImages = async () => {
-//       try {
-//         const response = await axios.get('http://localhost:3000/api/images'); // Replace with your API endpoint
-//         setImages(response.data);
-//       } catch (error) {
-//         console.error('Error fetching images:', error);
-//       }
-//     };
-
-//     fetchImages();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Image Gallery</h1>
-//       <div className="image-container">
-//         {images.map((image) => (
-//           <div key={image.id} className="image-item">
-//             <img src={/api/image/${image.id}} alt="Image" />
-//             <p>{image.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ImageGallery;
-
-// import React from 'react';
-// import './Intraction.css';
-// import profiles from '../data';
-
-// const Intraction = () => {
-
-//   const [images, setImages] = useState([]);
-
-//     // Fetch images from the server when the component mounts
-//     useEffect(() => {
-//       const fetchImages = async () => {
-//         try {
-//           const response = await axios.get('http://localhost:3000/api/images'); 
-//           setImages(response.data);
-//         } catch (error) {
-//           console.error('Error fetching images:', error);
-//         }
-//       };
-  
-//       fetchImages();
-//     }, []);
-
-//   return (
-//     <section className="section" id="profiles">
-//       {/* <div className="section-center-featured-center"> */}
-//         {profiles.map((profile) => {
-//           const { id, description,image_data} = images;
-//           return (
-//             <article key={id} className="profile-itemi">
-//               <div className='writtenParti'>
-//                 <div className='containeri'>
-//                   <div className='profilePici'>
-//                       <img src={image_data} alt="" />
-//                   </div>
-//                   <div className='nameAndDiscriptioni'>
-//                     <div className='profileNamei'>
-//                         <h3 className='namei'>{name}</h3>
-//                         <h4 className='clubNamei'>club :{clubName}</h4>
-//                     </div>
-//                     <div className='discriptioni'>
-//                         <p>{description}</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <div className='posti'>
-//                     <img src={image} alt="Post of ${name}" />
-//                 </div>
-//               </div>
-//             </article>
-//           );
-//         })}
-//       {/* </div> */}
-//     </section>
-//   );
-// };
-
-// export default Intraction;
 
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import axios from 'axios'; // Import axios for fetching data
@@ -101,11 +7,27 @@ const Intraction = () => {
   const [images, setImages] = useState([]);
 
   // Fetch images from the server when the component mounts
+  const [Data,setData] = useState('null');
+  useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('http://localhost:3000/api/profile');
+            setData(response.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+    }, []);
+
+
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/images');
         setImages(response.data);
+        console.log(response.data);
         
       } catch (error) {
         console.error('Error fetching images:', error);
@@ -124,13 +46,13 @@ const Intraction = () => {
             <div className='writtenParti'>
               <div className='containeri'>
                 <div className='profilePici'>
-                    <img src={`/api/image/${image.id}`} alt={`Profile of ${image.description}`} />
+                    <img src={`/api/profile/${image.email_id}`} alt={`Profile of ${image.description}`} />
                 </div>
                 <div className='nameAndDiscriptioni'>
-                <div className='profileNamei'>
-                 <h3 className='namei'>{name}</h3>
-                 <h4 className='clubNamei'>club :{club_name}</h4>
-               </div>
+                  <div className='profileNamei'>
+                    <h3 className='namei'>{name}</h3>
+                    <h4 className='clubNamei'>club :{club_name}</h4>
+                  </div>
                   <div className='profileNamei'>
                       <h3 className='namei'>{}</h3>
                   </div>

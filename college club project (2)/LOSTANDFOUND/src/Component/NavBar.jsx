@@ -25,15 +25,15 @@ const NavBar = () => {
         <div className='right'>
           <div className={`nav-menu ${isOpen ? 'open' : ''}`} id="nav-menu">
             <Link to="/" className="nav-item"><i className="fa-solid fa-house"></i> Home</Link>
-            <Link to="/Clubs" className="nav-item"><i className="fa-solid fa-user"></i> Clubs</Link>
-            <Link to="/login" className="nav-item"><i className="fa-solid fa-gears"></i> login</Link>
-            <Link to="/signUp" className="nav-item"><i className="fa-solid fa-envelope"></i> signup</Link>
+            <Link to="/Clubs" className="nav-item"><i class="ri-copyright-fill"></i> Clubs</Link>
+            <Link to="/login" className="nav-item"><i class="ri-login-box-fill"></i> login</Link>
+            {/* <Link to="/signUp" className="nav-item"><i className="fa-solid fa-envelope"></i> signup</Link> */}
             
             <div class="dropdown">
               <button class="dropbtn">Dropdown 
                 <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-content">
+              <div class="dropdown-content" id='aallo'>
                 <Link to="/Newsf" className="nav-item"> News </Link>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>

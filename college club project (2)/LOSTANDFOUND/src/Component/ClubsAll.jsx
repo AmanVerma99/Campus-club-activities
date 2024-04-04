@@ -69,7 +69,7 @@ const Interaction = () => {
                     <h3>club:{singlePost.club_name}</h3>
                     <div className='imagecontainerclubsPostClubsAll'>
                         <div className='imagesinconatinerClubsAll'>
-                          <img src={`/api/club/${singlePost.image_data}`} alt={`Profile of ${singlePost.club_name}`} />
+                          <img src={`/api/image/${singlePost.id}`} alt={`Profile of ${singlePost.club_name}`} />
                 
                         </div>
                     </div>
