@@ -1,0 +1,230 @@
+#aboutSection {
+    background-color: rgb(204, 198, 198);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'SF Pro Display', sans-serif;
+    overflow: hidden;
+}
+
+#mainAboutus {
+    position: relative;
+    overflow: hidden;
+}
+
+#headerAboutus {
+    background-color: black;
+    height: 90px;
+    padding: 0px;
+    
+}
+
+#nameAboutus {
+    text-align: center;
+    background-color: black;
+    padding: 25px;
+    font-size: 180%;
+    overflow: hidden;
+    color: white;
+}
+
+#page1tAboutus {
+    display: flex;
+    justify-content: center;
+}
+
+#logoAboutus {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+}
+
+#navbarAboutus {
+
+    text-align: center;
+}
+
+#Aboutus>ul {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbarAboutus>ul>li {
+    display: inline-block;
+    padding: 20px;
+
+}
+
+#navbarAboutus>ul>li>a {
+    display: block;
+    background-color: rgb(187, 187, 187);
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.75vw;
+    font-weight: 600;
+}
+
+#page1Aboutus {
+
+    height: 100vh;
+
+}
+
+#navbarAboutus>h1 {
+    text-align: center;
+    font-size: 4vw;
+    padding: 20px;
+    font-family: 'SF Pro Display', sans-serif;
+    color: rgb(174, 0, 0);
+    text-shadow: 3px 5px 2px black;
+}
+
+#page2Aboutus {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+
+}
+
+#page2Aboutus>img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+#page2Aboutus>p{
+    background-color: transparent;
+    font-size: 2.5vw;
+    font-weight: 200;
+    max-width:50% ;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+#page2Aboutus>p>b{
+    background-color: transparent;
+}
+#page3Aboutus{
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+}
+
+#page3Aboutus>p{
+    padding-top: 150px;
+    padding-left: 40px;
+    position: absolute;
+    max-width: 55%;
+    text-align: justify;
+    font-size: 2.5vw;
+    font-weight: 200;
+}
+#page3Aboutus>img{
+    height: 100%;
+    /* object-fit: cover; */
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+}
+#page4Aboutus {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#page4Aboutus>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+#page4Aboutus>p {
+    background-color: transparent;
+    font-size: 2.5vw;
+    font-weight: 200;
+    max-width:50% ;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+
+}
+#page4Aboutus>p>b{
+    background-color: transparent;
+}
+#page5Aboutus{
+    position:relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+#imggalleryAboutus{
+    display: flex;
+    transition: transform 0.2s ease;
+    width: 150%;
+}
+#imggalleryAboutus>img{
+    flex: 0 0 20%;
+    width: 30%;
+    margin: 20px 10px;
+    filter: brightness(50%);
+}
+#page5Aboutus>p{
+    font-size: 2.5vw;
+    font-weight: 200;
+    margin: auto;
+    max-width: 70%;
+    padding: 40px 20px;
+    text-align: center;
+
+}
+#page6Aboutus{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+#page6Aboutus>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+#page6Aboutus>p{
+    background-color: transparent;
+    font-size: 2.5vw;
+    font-weight: 200;
+    left: 50%;
+    text-align: center;
+    max-width: 70%;
+    color: white;
+    position: absolute;
+    bottom: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+#page6Aboutus>p>b{
+    background-color: transparent;
+}
+#footerAboutus{
+    height: 200px;
+    background-color: black;
+}

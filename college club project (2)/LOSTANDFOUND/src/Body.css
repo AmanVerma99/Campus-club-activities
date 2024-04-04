@@ -13,6 +13,18 @@
     border-right: 2px solid #ccc; 
   }
   
+.imageBody{
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
+.WEBSITENAME{
+  margin-top: 50px;
+  
+}
+.WEBSITENAME h2{
+  color: rgba(255, 0, 0, 0.594);
+}
   .newsb {
     flex: 2; 
     align-items: center;

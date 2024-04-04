@@ -245,7 +245,21 @@ const Body = () => {
       <NavBar />
       <div className="containerb">
         <div className="profileb">
-          <Profile />
+        {
+          somedata.position !== '' ? (
+            <Profile />
+          ) : (
+            // Replace 'OtherImageComponent' with the actual component you want to render
+            <div className='imageBody'>
+               <img src="https://img.collegepravesh.com/2014/02/NIT-Kurukshetra-Logo.png" alt="nit kkr" /> 
+               <div className='WEBSITENAME'>
+                <h2> ClubCraze </h2>
+              </div>
+            </div>
+            
+          )
+        }
+
           <form onSubmit={handleSubmit}>
             {/* <h4>{somedata.club_name}</h4> */}
             {somedata.position === 'PRESIDENT' && (
